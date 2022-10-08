@@ -6,8 +6,8 @@ function landing() {
   return (
     <div className="md:flex landing">
       <div className="text-transparent">
-        <div className="font-mono text-left md:pl-32 md:pt-60 pt-48 pl-10 ">
-          <h1 className="md:text-5xl text-left text-4xl font-medium bg-clip-text bg-gradient-to-r from-purple-800 to-red-700">
+        <div className="font-mono md:text-left text-center md:pl-28 md:pt-60 pt-28 pl-5 ">
+          <h1 className="md:text-5xl text-4xl font-medium bg-clip-text bg-gradient-to-r from-purple-800 to-red-700">
             Hello Enthusiastic <br />
             <span className="md:text-4xl text-3xl md:flex-shrink font-medium">
               <Typewriter
@@ -34,7 +34,7 @@ function landing() {
           </div>
         </div>
       </div>
-      <div className="object-right pl-32 py-16 invisible md:visible">
+      <div className="object-right md:pl-32 md:py-16 p-12">
         <Image
           className="rounded-2xl"
           src={logo}

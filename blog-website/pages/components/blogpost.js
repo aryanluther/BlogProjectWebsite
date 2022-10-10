@@ -1,9 +1,6 @@
 import React from "react";
-import { gql } from "@apollo/client";
-import client from "../../apolloClient";
 
-export default function blogpost({ posts }) {
-  console.log(posts);
+export default function blogpost() {
   return (
     <div>
       <div className="text-center">
@@ -14,36 +11,4 @@ export default function blogpost({ posts }) {
       <div></div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const { data: posts } = await client.query({
-    query: gql`
-      query {
-        posts {
-          title
-          slug
-          field
-          dt
-          coverPhoto {
-            url
-          }
-          richtext {
-            html
-          }
-          photo2 {
-            url
-          }
-          description
-        }
-      }
-    `,
-  });
-
-  console.log(posts);
-  return {
-    props: {
-      posts,
-    },
-  };
 }

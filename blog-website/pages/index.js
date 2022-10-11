@@ -3,6 +3,7 @@ import Landing from "./components/landing";
 import Blogpost from "./components/blogpost";
 import { gql } from "@apollo/client";
 import client from "../apolloClient";
+import Link from "next/link";
 
 export default function Home({ blogPostDevs }) {
   console.log(blogPostDevs);
@@ -14,7 +15,15 @@ export default function Home({ blogPostDevs }) {
         <Blogpost />
       </div>
       <div className="">
-        <ul></ul>
+        <ul>
+          {blogPostDevs.map((blogPostDev, i) => (
+            <li key={i}>
+              <Link href={`blogPostDevs/${blogPostDev.slug}`}>
+                {blogPostDev.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

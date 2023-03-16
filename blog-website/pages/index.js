@@ -1,6 +1,8 @@
 import NavBar from "./components/navbar";
 import Landing from "./components/landing";
 import Blogpost from "./components/blogpost";
+import Footer from "./components/footer";
+
 import { gql } from "@apollo/client";
 import client from "../apolloClient";
 import Link from "next/link";
@@ -35,6 +37,7 @@ export default function Home({ blogPostDevs }) {
           ))}
         </ul>
       </div>
+      <Footer />
     </div>
   );
 }
